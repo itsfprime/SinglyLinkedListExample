@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.util.ListIterator;
 
 public class SinglyLinkedList<T> {
     private Node<T> head;
@@ -119,4 +118,5 @@ public class SinglyLinkedList<T> {
 
         return current;
     }
+
 }
