@@ -9,7 +9,8 @@ public class TestList {
                 "\n5.) Alternating Add Remove Test" +
                 "\n6.) Reuse Removed Node Test" +
                 "\n7.) Stress Test" +
-                "\n8.) All tests");
+                "\n8.) Get Test" +
+                "\n9.) All tests");
         Scanner reader = new Scanner(System.in);
         int choice = reader.nextInt();
         switch (choice){
@@ -35,6 +36,9 @@ public class TestList {
                 stressTest();
                 break;
             case 8:
+                getTest();
+                break;
+            case 9:
                 noArgConstructorTest();
                 singleNodeListTest();
                 multiNodeListTest();
@@ -136,6 +140,19 @@ public class TestList {
         sll.removeFromFront();
         assert n.getNext() == null : "Removed node should not have access to old elements";
         sll.addToBack(n); // should not create loops or exceptions
+    }
+    private static void getTest(){
+        Node<Integer> n1 = new Node<>(1);
+        Node<Integer> n2 = new Node<>(2);
+        Node<Integer> n3 = new Node<>(3);
+        SinglyLinkedList<Integer> sll = new SinglyLinkedList<>();
+        sll.addToBack(n1); sll.addToBack(n2); sll.addToBack(n3);
+        System.out.println(sll.get(0).toString());
+        System.out.println(sll.get(1).toString());
+        System.out.println(sll.get(2).toString());
+        assert sll.get(0).getData().equals(1) : "n1 should be 1";
+        assert sll.get(1).getData().equals(2) : "n1 should be 2";
+        assert sll.get(2).getData().equals(3) : "n1 should be 3";
     }
     private static void stressTest(){
         SinglyLinkedList<Integer> sll = new SinglyLinkedList<>();

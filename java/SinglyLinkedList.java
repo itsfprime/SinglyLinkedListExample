@@ -104,4 +104,14 @@ public class SinglyLinkedList<T> {
         }
         return count;
     }
+
+    public Node<T> get(int index){
+        Node<T> current = head;
+        for(int i = 0; i < index; i++){
+            if(current.getNext() != null){
+                current = current.getNext();
+            }
+        }
+        return current;
+    }
 }

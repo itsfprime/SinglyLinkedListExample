@@ -11,4 +11,5 @@
 - **isEmpty()** — Returns true if list has no nodes.
 - **toString()** — Returns string representation of list contents.
 - **size()** — Returns node count. O(n)
-#### Test Coverage : No argument constructor, single node lists, multiple node lists, sequential removal of multiple nodes, alternating add & remove operations, removed node pointer test, stress test
+- **get(int index)** returns node at index. O(n)
+#### Test Coverage : No argument constructor, single node lists, multiple node lists, sequential removal of multiple nodes, alternating add & remove operations, removed node pointer test, stress test, get test
