@@ -106,12 +106,17 @@ public class SinglyLinkedList<T> {
     }
 
     public Node<T> get(int index){
+        if (index < 0) throw new IndexOutOfBoundsException("Index cannot be negative.");
+
         Node<T> current = head;
+
         for(int i = 0; i < index; i++){
-            if(current.getNext() != null){
-                current = current.getNext();
-            }
+            if (current == null) throw new IndexOutOfBoundsException("Index out of bounds.");
+            current = current.getNext();
         }
+
+        if (current == null) throw new IndexOutOfBoundsException("Index out of bounds.");
+
         return current;
     }
 }
