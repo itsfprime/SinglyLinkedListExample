@@ -8,7 +8,8 @@ public class TestList {
                 "\n4.) Sequential Removal Test" +
                 "\n5.) Alternating Add Remove Test" +
                 "\n6.) Reuse Removed Node Test" +
-                "\n7.) Stress Test");
+                "\n7.) Stress Test" +
+                "\n8.) All tests");
         Scanner reader = new Scanner(System.in);
         int choice = reader.nextInt();
         switch (choice){
@@ -31,6 +32,15 @@ public class TestList {
                 reuseRemovedNodeTest();
                 break;
             case 7:
+                stressTest();
+                break;
+            case 8:
+                noArgConstructorTest();
+                singleNodeListTest();
+                multiNodeListTest();
+                sequentialRemovalTest();
+                alternatingAddRemoveTest();
+                reuseRemovedNodeTest();
                 stressTest();
                 break;
             default:
